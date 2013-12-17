@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Storyboard</title>
+    <link rel="stylesheet" href="./build/build.css" />
+    <link rel="icon" type="image/x-icon" href="./build/storyboard-view/favicon.ico">
+    <style>
+      html, body {
+        font-family: Helvetica;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./build/build.js"></script>
+    <script>
+      var StoryboardView = require('storyboard-view')
+        , Collection = require('collection')
+        , Task = require('task-model')
+        , Story = require('story-model');
+
+      var stories = new Collection;
+
+      var story1 = new Story({
+        "title": "Better safe than story"
+      });
+      story1.tasks.push(new Task({
+        "title": "Move lawn",
+        "assignee": "Henrik Kjelsberg",
+        "email": "hkjels@me.com",
+        "priority": "high",
+        "estimate": 3,
+        "state": "todo"
+      }));
+      stories.push(story1);
+
+      var storyboard = new StoryboardView(stories);
+      document.body.appendChild(storyboard.el);
+    </script>
+  </body>
+</html>

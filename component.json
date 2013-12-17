@@ -1,0 +1,19 @@
+{
+  "name": "storyboard-view",
+  "description": "Scrum storyboard view-component",
+  "version": "0.0.1",
+  "author": "Henrik Kjelsberg",
+  "repo": "zedge/storyboard-view",
+  "scripts": ["index.js"],
+  "styles": ["style.css"],
+  "templates": ["board.html"],
+  "dependencies": {
+    "component/domify": "*",
+    "hkjels/story-view": "*"
+  },
+  "development": {
+    "component/collection": "*",
+    "hkjels/story-model": "*",
+    "hkjels/task-model": "*"
+  }
+}
