@@ -1,42 +1,26 @@
 
 .storyboard {
-  display: flex;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgb(176, 196, 222);
   height: 100%;
+  margin-top: 1rem;
 }
-
-.storyboard .status {
-  box-sizing: border-box;
-  height: 100%;
-  position: relative;
-  padding-top: 6rem;
-}
-  .storyboard .status::before {
-    content: attr(title);
-    display: block;
-    font-size: 3rem;
-    font-weight: 100;
-    position: absolute;
-    text-align: center;
-    top: 1rem;
-    width: 100%;
+  .storyboard .status {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    padding-top: 6rem;
   }
-  .storyboard .stories {
-    position: absolute;
-    width: 100%;
-  }
-  .storyboard .todo {
-    flex: 1.1;
-  }
-  .storyboard .progress {
-    flex: 0.8;
-  }
-  .storyboard > .progress {
-    border-left: 1px solid silver;
-    border-right: 1px solid silver;
-  }
-  .storyboard .done {
-    flex: 1.1;
-  }
+    .storyboard .status::before {
+      content: attr(title);
+      display: block;
+      font-size: 3rem;
+      font-weight: 100;
+      position: absolute;
+      text-align: center;
+      top: 1rem;
+      width: 100%;
+    }
 
   .storyboard .followers {
     background-color: white;
@@ -46,16 +30,8 @@
     position: fixed;
     height: 100px;
     transition: opacity .2s linear, transform .3s ease-in-out;
+    left: 0;
     width: 100%;
     z-index: 1000;
   }
-
-.storyboard .show {
-  opacity: 1;
-  transform: translateY(0px);
-}
-.storyboard .hide {
-  opacity: 0;
-  transform: translateY(100px);
-}
 
