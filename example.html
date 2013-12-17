@@ -19,11 +19,10 @@
     <script src="./build/build.js"></script>
     <script>
       var StoryboardView = require('storyboard-view')
-        , Collection = require('collection')
         , Task = require('task-model')
         , Story = require('story-model');
 
-      var stories = new Collection;
+      var stories = {};
 
       var story1 = new Story({
         "title": "Better safe than story"
@@ -36,7 +35,7 @@
         "estimate": 3,
         "state": "todo"
       }));
-      stories.push(story1);
+      stories[1] = story1;
 
       var storyboard = new StoryboardView(stories);
       document.body.appendChild(storyboard.el);

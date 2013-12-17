@@ -9,6 +9,7 @@
   "templates": ["board.html"],
   "dependencies": {
     "component/domify": "*",
+    "component/each": "*",
     "hkjels/story-view": "*"
   },
   "development": {

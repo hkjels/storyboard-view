@@ -4,6 +4,7 @@
  */
 
 var StoryView = require('story-view')
+  , each = require('each')
   , domify = require('domify')
   , board = domify(require('./board.html'));
 
@@ -18,10 +19,11 @@ module.exports = StoryboardView;
  */
 
 function StoryboardView(stories) {
+  var self = this;
   this.el = board;
-  stories.forEach(function(story) {
-    this.addStory(story);
-  }.bind(this));
+  each(stories, function(i, story) {
+    self.addStory(story);
+  });
 }
 
 
