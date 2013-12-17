@@ -20,6 +20,10 @@
     top: 1rem;
     width: 100%;
   }
+  .storyboard .stories {
+    position: absolute;
+    width: 100%;
+  }
   .storyboard .todo {
     flex: 1.1;
   }
